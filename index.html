@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Lesson 1 Gwenique's Resubmission After Signifcant Fixes</title>
+
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>"GWENIQUE'S HTLM & CSS CONCEPTS</title>
+  </head>
+  <body>
+<h1>GWENIQUE'S HTML & CSS CORE CONCEPTS</h1>
+<h1>Adding CSS Style</h1>Adding CSS Style
+  h1 {
+    color : pink;
+  }
+</style>.  We will learn why everything is still shown in the color pink with emphasis or italics later.
+<h1>
+  This is <em>pretty</em> weird
+</h1>
+We started with the following
+  <div class="title">My App</div>
+  <div class="app">
+    	<div class="screenshot">image</div>
+  		<div class="description">In ac ipsum quis turpis adipiscing commodo. <em>Mauris fermentum quam</em> in risus eleifend fringilla. <a href="#">Aliquam placerat</a>, ipsum sit amet cursus rhoncus, augue mi tincidunt erat, et consequat velit massa a velit. Cras eleifend lectus nec diam ornare, eu placerat mi ultricies. Etiam tempor iaculis feugiat. Ut tincidunt tempus libero non convallis. Morbi consequat eros eget elit porta porta. Curabitur placerat eros dui, vitae lobortis sapien laoreet ac. Maecenas a lacus diam. Morbi ante lectus, ornare sed suscipit at, tempus elementum purus. Suspendisse sodales hendrerit pharetra. Integer odio risus, convallis eu egestas ac, venenatis nec leo.</div>
+  </div>
+</BODY>
+ </html>
+<br>
+In this course we are learning how to add CSS Style in the above example we changed the text color to red by using the code .description {color : red;}.  Quite interesting and easy to do.  Then the instructor asked us to remove the style from the CSS as we no longer want the text to be red. So I deleted it.  If you're following along in scratchpad.io, there's a way to add style without having to use a separate file and the <link> tag . You can also put your style code in between an opening and closing <style> tag. For example, the following code achieves the same thing that Jessica just demonstrated.:
+<br> Here's teh code to use in scrathpad if you want the tex to be red for future reference.
+<style>
+  .description {
+    color : red;
+  }
+</style>
+
+<div class="title">My App</div>
+<div class="app">
+  <div class="screenshot">image</div>
+  <div class="description">
+    This is some example text.
+  </div>
+</div>
+<br>
+Jessica is about to explain how a language called CSS allows programmers to avoid repetition.
+
+CSS stands for "Cascading Style Sheets." The "C" is by far the most important part of this phrase. To experience "cascading" in action before Jessica explains it, do the following:
+
+<P>h1 {
+    color : pink;</P>
+1- Open scratchpad.io in a new window.
+
+2- Delete the existing scratchpad code.
+
+3- Copy the following code into the scratchpad pane:
+  <h1>
+  This is <em>pretty</em> weird
+</h1>
+<br>
+Note the color of the word "pretty." It's pink. Even though you may think pink is pretty, the word "pretty" is enclosed in <em> tags and the code never said that <em> tags should be pink.
+
+Keep this question in mind as you watch the next video: Why is "pretty" in pink?
+You can have SEVERAL HTML files and that's what cascading means.  CSS style rules apply to everything national state and house rules example - Rule Specifics.
+All links formed by A Tags yet can have different styles.
+If you want to know the details of the style of any item on a webpage, Right click on the item and choose inspect element.
+<p>
+<h1>Thinking about "Cascading"
+
+You don't need to understand or remember all the details of what Jessica just said, but there is an important idea that is worth thinking about.
+
+That idea is known as inheritance and understanding it requires abstract thinking.
+
+Read the short inheritance section of the Wikipedia Article on CSS and then come back and click next to move forward with instruction.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+    #xyz { color: red }
+    </style>
+  </head>
+  <body>
+    <p id="xyz" style="color: blue"> To demonstrate specificity </p>
+  </body>
+</html>
+Inheritance
+
+Inheritance is a key feature in CSS, it relies on the ancestor-descendant relationship to operate. Inheritance is the mechanism by which properties are applied not only to a specified element, but also to its descendants.[11] Inheritance relies on the document tree, which is the hierarchy of (X)HTML elements in a page based on nesting. Descendant elements may inherit CSS property values from any ancestor element enclosing them. In general, descendant elements inherit text-related properties, but box-related properties are not inherited. Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index.
+
+Inheritance prevents certain properties from being declared over and over again in a style sheet, allowing the software developers to write less CSS. It enhances faster-loading of web pages by users and enables the clients to save money on bandwidth and development costs.
+Example of inheritance
+
+Given the following style sheet:
+
+h1 {
+   color: pink;
+}
+
+Suppose there is an h1 element with an emphasizing element (em) inside:
+
+<h1>
+   This to <em>illustrate</em> inheritance
+</h1>
+
+If no color has been assigned to the em element, the emphasized word "illustrate" will inherit the color of the parent element, h1. The style sheet h1 has the color pink, hence, the em element will likewise be in pink.
+Whitespace
+
+Whitespace between properties and selectors is ignored. This code snippet:
+
+body{overflow:hidden;background:#000000;}
+
+is functionally equivalent to this one:
+
+body {
+   overflow: hidden;
+   background: #000000;
+}
+
+One common way to format CSS for readability is to indent each property and give it its own line.  CSS has alot of functionality and it reminds me of fonts and formatting in Microsoft Word or Page Plus in some of the Serif Products. Check oout https://css-tricks.com/how-css-selectors-work/ as this site allows you to view 
+<h1 class="p-name">Beginner Concepts: How CSS Selectors Work</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>We're learning selectors!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1 id="yay">Yay</h1>
+
+<body>
+</html>
+
+Font-weight properties the value can be boldthat will change wording to bold.  What is CSS?
+
+CSS is code written to control the "style" of HTML elements.
+How does CSS "control" HTML?
+
+If you want to write CSS that makes all h1 elements have a black background and white text, you would write:
+
+h1 {
+  background-color : black;
+
+    In HTML, code comments begin with <!-- and end with -->. Everything in between is ignored.
+
+    In CSS, code comments begin with /* and end with */.
+
+    <!-- This is an HTML comment. It's just here for PEOPLE to read. The computer ignores it.  -->
+
+<body>
+  <h1>Important Concepts</h1>
+
+  <!-- I chose to put each lesson into it's own div. By putting a box around each lesson, the structure of the code reflects the structure of the lessons -->
+  <div>
+    <h2>Lesson 1: The Basics of the Web and HTML</h2>
+
+    <!-- I also put each new concept inside of a div. This is concept 1 -->
+    <div>
+      <p>
+        <b>How the Web Works</b>
+      </p>
+      <p>
+        The web is a bunch of computers that communicate with
+        each other. When a person goes to a web page like
+        www.google.com, their computer sends a <em>HTTP Request</em>
+        to a <em>server</em>. The server finds the appropriate
+        HTML document and sends it back to the user's computer where
+        a <em>web browser</em> interprets the page and displays it
+        on the user's screen.
+        <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/e-48329854/m-48480496">This video</a>
+        does a good job of explaining more.
+      </p>
+    </div>
+    <!-- And this is where concept 1 ends. Note how the indentation level now matches up with where lesson 1 began.-->
+
+    <!-- Now concept 2 begins... -->
+    <div>
+      <p>
+        <b>HTML</b>
+      </p>
+      <p>
+        HTML stands for <em>Hypertext Markup Language.</em> HTML
+        documents form the majority of the content on the web.
+        HTML documents contain <em>text content</em> which describes
+        "what you see" and <em>markup</em> which describes "how it
+        looks". <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48724340">This video</a>
+        gives a good overview.
+      </p>
+    </div>
+    <div>
+      <p>
+        <b>Tags and Elements</b>
+      </p>
+      <p>
+        HTML documents are made of HTML <b>elements</b>. When
+        writing HTML, we tell browsers the type of each element
+        by using HTML <b>tags</b>.
+        <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48723444">This video</a>
+        explains the distinction well.
+      </p>
+    </div>
+    <div>
+      <p>
+        <b>Why Computers are Stupid</b>
+      </p>
+      <p>
+        Computers are stupid because they interpret instructions
+        literally. This makes them very unforgiving since a small
+        mistake by a programmer can cause huge problems in a program.
+      </p>
+    </div>
+    <div>
+      <p>
+        <b>Inline vs Block Elements</b>
+      </p>
+      <p>
+        HTML elements are either <b>inline</b> or <b>block</b>.
+        Block elements form an "invisible box" around the
+        content inside of them.
+      </p>
+    </div>
+  </div>
+  <!-- Notice that the indentation level is back to where it was when the <div> for Lesson 1 began. And now the div for lesson two begins... -->
+  <div>
+    <h2>Lesson 2: Creating a Structured Document with HTML</h2>
+    <div>
+      <p>
+        <b>Developer Tools (in the Browser)</b>
+      </p>
+      <p>
+        HTML elements are either <b>inline</b> or <b>block</b>.
+        Block elements form an "invisible box" around the
+        content inside of them.
+      </p>
+    </div>
+    <div>
+      <p>
+        <b>The "tree-like structure" of HTML</b>
+      </p>
+      <p>
+        The "tree-like structure" comes from the fact that HTML
+        elements can have other elements inside of them. You can
+        draw this relationship like a family tree. My mother had
+        multiple children. So did her mother, and so on...
+        <br>
+        In a browser, this structure shows up as a series of
+        nested boxes. There are boxes inside of boxes inside of
+        boxes, and so on...
+      </p>
+    </div>
+    <div>
+      <p>
+        <b>The relationship between indented HTML and boxes</b>
+      </p>
+      <p>
+        When you read an HTML document as <em>text</em>, you see a wave
+        of changing indentations going up and down the left side
+        of the document. The more indented an element is, the more
+        deeply nested it's corresponding "box" is.
+      </p>
+    </div>
+    <div>
+      <p>
+        <b>Text Editors (for programming)</b>
+      </p>
+      <p>
+        When writing code, programmers use special text editors (like
+        Sublime Text for example). These editors make the programmer's
+        life easier. For example, some text editors will automatically
+        generate a closing HTML tag when you write an opening tag.
+      </p>
+    </div>
+  </div>
+</body>
+ </div>
+      <div class="concept-description">
+        <p>
+          When you read an HTML document as 
+          <span class="italic">text</span>, you see a wave of 
+          changing indentations going up and down the left side 
+          of the document. The more indented an element is, the 
+          more deeply nested its corresponding "box" is.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        Text Editors (for programming)
+      </div>
+      <div class="concept-description">
+        <p>
+          When writing code, programmers use special text editors 
+          (like Sublime Text for example). These editors make the 
+          programmer's life easier. For example, some text editors 
+          will automatically generate a closing HTML tag when you 
+          write an opening tag.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</body>
+
+</html>
